@@ -17,9 +17,9 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::PartiallyChecked" name="Land Use">
+    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Land Use">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="memory" checked="Qt::Checked" id="memory_20180410143911313" source="MultiPolygon?uuid=9f97b3c5-3c20-4403-88dc-33b10c26d799&amp;crs=EPSG:26915&amp;field=flu_desc:string&amp;field=zonedesc:string" name="Future Clipped">
+      <layer-tree-layer expanded="0" providerKey="memory" checked="Qt::Unchecked" id="memory_20180410143911313" source="memory?geometry=MultiPolygon&amp;crs=EPSG:26915&amp;field=flu_desc:string(255,0)&amp;field=zonedesc:string(255,0)&amp;field=Description:string(100,0)" name="Future Clipped">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="Future_Clipped20180409214243379" source="C:/Users/Amanda/Documents/Documents/RPI/GIS/New Orleans/Future Land Use/Future Clipped.shp" name="2007 Clipped">
@@ -96,6 +96,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="geo_export_7b765b19_39c3_4561_acb1_401e6a3e09c320180402203007367"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:26915" srcDatumTransform="-1" destDatumTransform="-1" layerid="2007_Clip_120180410090832082"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:26915" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180410143911313"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:26915" srcDatumTransform="-1" destDatumTransform="-1" layerid="2007_Clipped20180410214154597"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:26915" srcDatumTransform="-1" destDatumTransform="-1" layerid="Slope20180402211921962"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:26915" srcDatumTransform="-1" destDatumTransform="-1" layerid="landuse_slouisiana20180402203018608"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4269" srcDatumTransform="-1" destDatumTransform="-1" layerid="USGS_NED_1_n30w091_IMG20180402212038236"/>
@@ -150,10 +151,10 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::PartiallyChecked" name="Land Use">
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Future Clipped" showFeatureCount="0">
+    <legendgroup open="true" checked="Qt::PartiallyChecked" name="Land Use">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Future Clipped" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="memory_20180410143911313" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="memory_20180410143911313" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="2007 Clipped" showFeatureCount="0">
@@ -1082,7 +1083,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="flu_desc" index="0" name=""/>
         <alias field="zonedesc" index="1" name=""/>
@@ -1090,7 +1091,7 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="1230909421">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="flu_link"/>
           <column width="-1" hidden="0" type="field" name="zonenum"/>
@@ -1117,10 +1118,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1136,6 +1137,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "objectid", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>776240.0382588003994897</xmin>
+        <ymin>3308076.53150891279801726</ymin>
+        <xmax>814394.03913107700645924</xmax>
+        <ymax>3341842.64863337157294154</ymax>
+      </extent>
       <id>Future_Clipped20180409214243379</id>
       <datasource>../../../Documents/RPI/GIS/New Orleans/Future Land Use/Future Clipped.shp</datasource>
       <keywordList>
@@ -2997,8 +3004,6 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
         </source-symbol>
-        <colorramp type="randomcolors" name="[source]"/>
-        <invertedcolorramp value="0"/>
         <rotation/>
         <sizescale scalemethod="diameter"/>
       </renderer-v2>
@@ -3174,6 +3179,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -3199,7 +3205,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="flu_desc" index="0" name=""/>
         <alias field="zonedesc" index="1" name=""/>
@@ -3216,10 +3222,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="Description"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -3278,12 +3284,16 @@ def my_form_open(dialog, layer, feature):
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
+        <value>2007_Clip_220180410091549996</value>
         <value>Future_15NCRS20180409212634159</value>
+        <value>Future_220180410143608304</value>
         <value>Future_Clipped20180409214243379</value>
         <value>levees_USACE_200620180402203205641</value>
-        <value>2007_Clip_220180410091549996</value>
+        <value>memory_20180410143911313</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
+        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -3296,8 +3306,12 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -3306,6 +3320,8 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
